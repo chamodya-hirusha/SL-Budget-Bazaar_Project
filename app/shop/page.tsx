@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import type { Metadata } from "next"
 import { ShopContent } from "@/components/shop-content"
 
@@ -19,7 +20,9 @@ export default function ShopPage() {
             Discover quality imported products at the best prices
           </p>
         </div>
-        <ShopContent />
+        <Suspense fallback={<div className="h-96 flex items-center justify-center">Loading shop...</div>}>
+          <ShopContent />
+        </Suspense>
       </div>
     </div>
   )

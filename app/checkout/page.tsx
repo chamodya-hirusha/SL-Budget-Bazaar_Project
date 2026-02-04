@@ -268,41 +268,43 @@ export default function CheckoutPage() {
                                         </CardTitle>
                                     </div>
                                 </CardHeader>
-                                <CardContent className="px-6 md:px-10 py-8 md:py-10 space-y-6">
-                                    <div className="flex flex-col gap-2">
-                                        <Label htmlFor="address" className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground">Delivery Address</Label>
-                                        <Textarea
-                                            id="address"
-                                            name="address"
-                                            placeholder="House No, Street Name, Area"
-                                            required
-                                            value={formData.address}
-                                            onChange={handleChange}
-                                            className="w-full rounded-2xl min-h-[120px] resize-none border-zinc-200 focus-visible:ring-primary/20 p-6 text-base font-medium leading-normal bg-white"
-                                        />
-                                    </div>
-                                    <div className="flex flex-col gap-2">
-                                        <Label htmlFor="city" className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground">City / Town</Label>
-                                        <Input
-                                            id="city"
-                                            name="city"
-                                            placeholder="Colombo, Kandy, etc."
-                                            required
-                                            value={formData.city}
-                                            onChange={handleChange}
-                                            className="w-full rounded-2xl h-14 border-zinc-200 focus-visible:ring-primary/20 px-6 text-base font-medium leading-normal bg-white"
-                                        />
-                                    </div>
-                                    <div className="flex flex-col gap-2">
-                                        <Label htmlFor="notes" className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground">Order Notes (Optional)</Label>
-                                        <Textarea
-                                            id="notes"
-                                            name="notes"
-                                            placeholder="Any special instructions for delivery?"
-                                            value={formData.notes}
-                                            onChange={handleChange}
-                                            className="w-full rounded-2xl min-h-[100px] resize-none border-zinc-200 focus-visible:ring-primary/20 p-6 text-base font-medium leading-normal bg-white"
-                                        />
+                                <CardContent className="p-6 md:p-10">
+                                    <div className="flex flex-col gap-6">
+                                        <div className="flex flex-col gap-2.5">
+                                            <Label htmlFor="address" className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground ml-1">Delivery Address</Label>
+                                            <Textarea
+                                                id="address"
+                                                name="address"
+                                                placeholder="House No, Street Name, Area"
+                                                required
+                                                value={formData.address}
+                                                onChange={handleChange}
+                                                className="w-full rounded-2xl min-h-[120px] resize-none border-zinc-200 bg-white p-6 text-base font-medium shadow-none focus-visible:ring-primary/20 transition-all"
+                                            />
+                                        </div>
+                                        <div className="flex flex-col gap-2.5">
+                                            <Label htmlFor="city" className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground ml-1">City / Town</Label>
+                                            <Input
+                                                id="city"
+                                                name="city"
+                                                placeholder="Colombo, Kandy, etc."
+                                                required
+                                                value={formData.city}
+                                                onChange={handleChange}
+                                                className="w-full rounded-2xl h-14 border-zinc-200 bg-white px-6 text-base font-medium shadow-none focus-visible:ring-primary/20 transition-all"
+                                            />
+                                        </div>
+                                        <div className="flex flex-col gap-2.5">
+                                            <Label htmlFor="notes" className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground ml-1">Order Notes (Optional)</Label>
+                                            <Textarea
+                                                id="notes"
+                                                name="notes"
+                                                placeholder="Any special instructions for delivery?"
+                                                value={formData.notes}
+                                                onChange={handleChange}
+                                                className="w-full rounded-2xl min-h-[100px] resize-none border-zinc-200 bg-white p-6 text-base font-medium shadow-none focus-visible:ring-primary/20 transition-all"
+                                            />
+                                        </div>
                                     </div>
                                 </CardContent>
                             </Card>
